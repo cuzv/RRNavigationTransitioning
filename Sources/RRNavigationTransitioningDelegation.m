@@ -44,12 +44,16 @@
     self.popFromRightEdge = sender.edges == UIRectEdgeRight;
     
     CGPoint translate = [sender translationInView:sender.view];
-    CGFloat percent = fabs(translate.x / sender.view.bounds.size.width);
+    CGFloat percent = translate.x / sender.view.bounds.size.width;
+    if (self.popFromRightEdge) {
+        percent *= -1;
+    }
     
     switch (sender.state) {
         case UIGestureRecognizerStateBegan:
             if (!self.interactiveTransition && self.navigationController.viewControllers.count > 0) {
                 self.interactiveTransition = [UIPercentDrivenInteractiveTransition new];
+                self.interactiveTransition.completionCurve = UIViewAnimationCurveEaseOut;
                 [self.navigationController popViewControllerAnimated:YES];
             }
             break;
@@ -61,8 +65,12 @@
             self.interactiveTransition = nil;
             break;
         case UIGestureRecognizerStateEnded: {
-            CGPoint velocity = [sender velocityInView:sender.view];
-            if (percent > 0.5 || (self.popFromRightEdge && velocity.x < -300) || (!self.popFromRightEdge && velocity.x > 300)) {
+            CGFloat velocity = [sender velocityInView:sender.view].x;
+            if (self.popFromRightEdge) {
+                velocity *= -1;
+            }
+
+            if (percent > 0.5 || velocity > 250) {
                 [self.interactiveTransition finishInteractiveTransition];
             } else {
                 [self.interactiveTransition cancelInteractiveTransition];
@@ -91,7 +99,8 @@
     }
     if (operation == UINavigationControllerOperationPop) {
         _RRPopAnimator *one = [_RRPopAnimator new];
-        one.fromRight = self.popFromRightEdge;
+        one.interactive = nil != self.interactiveTransition;
+        one.fromRight = one.interactive && self.popFromRightEdge;
         return one;
     }
     return nil;

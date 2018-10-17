@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface _RRPopAnimator : NSObject <UIViewControllerAnimatedTransitioning>
 @property (nonatomic, assign) BOOL fromRight;
+@property (nonatomic, assign) BOOL interactive;
 @end
 
 NS_ASSUME_NONNULL_END

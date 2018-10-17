@@ -27,7 +27,7 @@
     
     [UIView animateWithDuration:[self transitionDuration:transitionContext]
                           delay:0
-                        options:UIViewAnimationOptionCurveLinear | UIViewAnimationOptionBeginFromCurrentState
+                        options:7 << 16 | UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
                          toVC.view.frame = containerView.bounds;
                      } completion:^(BOOL finished) {
