@@ -34,7 +34,8 @@ extern UIViewAnimationOptions const _RRViewAnimationOptionCurvekeyboard;
     UIView *containerView = transitionContext.containerView;
     [containerView insertSubview:toVC.view belowSubview:fromVC.view];
     
-    UITabBar *tabBar = toVC.tabBarController.tabBar;
+    UITabBarController *tabBarController = toVC.tabBarController;
+    UITabBar *tabBar = tabBarController.tabBar;
     if (tabBar && fromVC.hidesBottomBarWhenPushed && !toVC.hidesBottomBarWhenPushed) {
         CGRect newRect = tabBar.frame;
         newRect.origin.x = toVC.view.frame.origin.x;
@@ -53,6 +54,9 @@ extern UIViewAnimationOptions const _RRViewAnimationOptionCurvekeyboard;
                      animations:^{
                          fromVC.view.transform = CGAffineTransformMakeTranslation(offset, 0);
                      } completion:^(BOOL finished) {
+                         if ([containerView.subviews containsObject:tabBar]) {
+                             [tabBarController.view addSubview:tabBar];
+                         }
                          [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
                      }];
 }

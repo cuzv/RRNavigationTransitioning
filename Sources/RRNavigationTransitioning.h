@@ -18,4 +18,3 @@ FOUNDATION_EXPORT const unsigned char RRNavigationTransitioningVersionString[];
 
 #import <RRNavigationTransitioning/RRNavigationController.h>
 #import <RRNavigationTransitioning/RRNavigationTransition.h>
-#import <RRNavigationTransitioning/RRTabBar.h>

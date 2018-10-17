@@ -7,6 +7,7 @@
 //
 
 #import "_RRPushAnimator.h"
+#import "UITabBar+RRSwizzle.h"
 
 UIViewAnimationOptions const  _RRViewAnimationOptionCurvekeyboard = 7 << 16;
 
@@ -28,13 +29,11 @@ UIViewAnimationOptions const  _RRViewAnimationOptionCurvekeyboard = 7 << 16;
     [containerView addSubview:toVC.view];
     toVC.view.transform = CGAffineTransformMakeTranslation(containerView.bounds.size.width, 0);
     
-    UITabBar *tabBar = toVC.tabBarController.tabBar;
-    BOOL shouldHide = NO;
+    UITabBarController *tabBarController = fromVC.tabBarController;
+    UITabBar *tabBar = tabBarController.tabBar;
     if (tabBar && !fromVC.hidesBottomBarWhenPushed && toVC.hidesBottomBarWhenPushed) {
         [containerView insertSubview:tabBar belowSubview:toVC.view];
-        // FIXME:
-//        [tabBar setHidden:YES];
-        [tabBar.layer removeAllAnimations];
+        tabBar._rr_pushing = YES;
     }
     
     [UIView animateWithDuration:[self transitionDuration:transitionContext]
@@ -43,10 +42,12 @@ UIViewAnimationOptions const  _RRViewAnimationOptionCurvekeyboard = 7 << 16;
                      animations:^{
                          toVC.view.transform = CGAffineTransformIdentity;
                      } completion:^(BOOL finished) {
-                         CGRect newRect = tabBar.frame;
-                         newRect.origin.x = 0;
-                         tabBar.frame = newRect;
-                         
+                         if ([containerView.subviews containsObject:tabBar]) {
+                             [tabBarController.view addSubview:tabBar];
+                         }
+                         if (tabBar._rr_pushing) {
+                             tabBar._rr_pushing = NO;
+                         }
                          [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
                      }];
 }

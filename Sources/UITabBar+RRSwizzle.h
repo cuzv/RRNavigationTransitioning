@@ -1,5 +1,5 @@
 //
-//  RRTabBar.h
+//  UITabBar+RRSwizzle.h
 //  RRNavigationTransitioning
 //
 //  Created by Shaw on 10/17/18.
@@ -10,8 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RRTabBar : UITabBar
-
+@interface UITabBar (RRSwizzle)
+@property (nonatomic, assign) BOOL _rr_pushing;
 @end
 
 NS_ASSUME_NONNULL_END
