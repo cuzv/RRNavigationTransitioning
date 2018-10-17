@@ -8,6 +8,8 @@
 
 #import "_RRPopAnimator.h"
 
+extern UIViewAnimationOptions const _RRViewAnimationOptionCurvekeyboard;
+
 @implementation _RRPopAnimator
 
 - (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext {
@@ -32,16 +34,24 @@
     UIView *containerView = transitionContext.containerView;
     [containerView insertSubview:toVC.view belowSubview:fromVC.view];
     
+    UITabBar *tabBar = toVC.tabBarController.tabBar;
+    if (tabBar && fromVC.hidesBottomBarWhenPushed && !toVC.hidesBottomBarWhenPushed) {
+        CGRect newRect = tabBar.frame;
+        newRect.origin.x = toVC.view.frame.origin.x;
+        tabBar.frame = newRect;
+        [containerView insertSubview:tabBar belowSubview:fromVC.view];
+    }
+    
     CGFloat offset = containerView.frame.size.width;
     if (self.fromRight) {
         offset *= -1;
     }
-    UIViewAnimationOptions options = (self.interactive ? UIViewAnimationOptionCurveLinear : (7 << 16)) | UIViewAnimationOptionBeginFromCurrentState;
+    UIViewAnimationOptions options = (self.interactive ? UIViewAnimationOptionCurveLinear : _RRViewAnimationOptionCurvekeyboard) | UIViewAnimationOptionBeginFromCurrentState;
     [UIView animateWithDuration:[self transitionDuration:transitionContext]
                           delay:0
                         options:options
                      animations:^{
-                         fromVC.view.frame = CGRectOffset(containerView.bounds, offset, 0);
+                         fromVC.view.transform = CGAffineTransformMakeTranslation(offset, 0);
                      } completion:^(BOOL finished) {
                          [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
                      }];

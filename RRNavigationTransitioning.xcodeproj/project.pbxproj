@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37894BFD21770E1A004F913A /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37894BFC21770E1A004F913A /* TabBar.storyboard */; };
 		F9D5985621762D9D003B85B7 /* RRNavigationTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D5985421762D9D003B85B7 /* RRNavigationTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9D5987D21762DE6003B85B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5987C21762DE6003B85B7 /* AppDelegate.swift */; };
 		F9D5987F21762DE6003B85B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5987E21762DE6003B85B7 /* ViewController.swift */; };
@@ -21,8 +22,8 @@
 		F9D5989E21763620003B85B7 /* _RRPushAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D5989C21763620003B85B7 /* _RRPushAnimator.m */; };
 		F9D598A12176362F003B85B7 /* _RRPopAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D5989F2176362F003B85B7 /* _RRPopAnimator.h */; };
 		F9D598A22176362F003B85B7 /* _RRPopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D598A02176362F003B85B7 /* _RRPopAnimator.m */; };
-		F9D598A621764E66003B85B7 /* RRNavigationTransitioningDelegation.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D598A421764E66003B85B7 /* RRNavigationTransitioningDelegation.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F9D598A721764E66003B85B7 /* RRNavigationTransitioningDelegation.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D598A521764E66003B85B7 /* RRNavigationTransitioningDelegation.m */; };
+		F9D598A621764E66003B85B7 /* RRNavigationTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D598A421764E66003B85B7 /* RRNavigationTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9D598A721764E66003B85B7 /* RRNavigationTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D598A521764E66003B85B7 /* RRNavigationTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		37894BFC21770E1A004F913A /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		F9D5985121762D9D003B85B7 /* RRNavigationTransitioning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RRNavigationTransitioning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D5985421762D9D003B85B7 /* RRNavigationTransitioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRNavigationTransitioning.h; sourceTree = "<group>"; };
 		F9D5985521762D9D003B85B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,8 +68,8 @@
 		F9D5989C21763620003B85B7 /* _RRPushAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _RRPushAnimator.m; sourceTree = "<group>"; };
 		F9D5989F2176362F003B85B7 /* _RRPopAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _RRPopAnimator.h; sourceTree = "<group>"; };
 		F9D598A02176362F003B85B7 /* _RRPopAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _RRPopAnimator.m; sourceTree = "<group>"; };
-		F9D598A421764E66003B85B7 /* RRNavigationTransitioningDelegation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRNavigationTransitioningDelegation.h; sourceTree = "<group>"; };
-		F9D598A521764E66003B85B7 /* RRNavigationTransitioningDelegation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRNavigationTransitioningDelegation.m; sourceTree = "<group>"; };
+		F9D598A421764E66003B85B7 /* RRNavigationTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRNavigationTransition.h; sourceTree = "<group>"; };
+		F9D598A521764E66003B85B7 /* RRNavigationTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRNavigationTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +116,8 @@
 				F9D5985421762D9D003B85B7 /* RRNavigationTransitioning.h */,
 				F9D5988E21762E13003B85B7 /* RRNavigationController.h */,
 				F9D5988C21762E07003B85B7 /* RRNavigationController.m */,
-				F9D598A421764E66003B85B7 /* RRNavigationTransitioningDelegation.h */,
-				F9D598A521764E66003B85B7 /* RRNavigationTransitioningDelegation.m */,
+				F9D598A421764E66003B85B7 /* RRNavigationTransition.h */,
+				F9D598A521764E66003B85B7 /* RRNavigationTransition.m */,
 				F9D5989B21763620003B85B7 /* _RRPushAnimator.h */,
 				F9D5989C21763620003B85B7 /* _RRPushAnimator.m */,
 				F9D5989F2176362F003B85B7 /* _RRPopAnimator.h */,
@@ -130,6 +132,7 @@
 				F9D5987C21762DE6003B85B7 /* AppDelegate.swift */,
 				F9D5987E21762DE6003B85B7 /* ViewController.swift */,
 				F9D5988021762DE6003B85B7 /* Main.storyboard */,
+				37894BFC21770E1A004F913A /* TabBar.storyboard */,
 				F9D5988321762DE7003B85B7 /* Assets.xcassets */,
 				F9D5988521762DE7003B85B7 /* LaunchScreen.storyboard */,
 				F9D5988821762DE7003B85B7 /* Info.plist */,
@@ -145,7 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9D5989D21763620003B85B7 /* _RRPushAnimator.h in Headers */,
-				F9D598A621764E66003B85B7 /* RRNavigationTransitioningDelegation.h in Headers */,
+				F9D598A621764E66003B85B7 /* RRNavigationTransition.h in Headers */,
 				F9D5985621762D9D003B85B7 /* RRNavigationTransitioning.h in Headers */,
 				F9D5989021762E13003B85B7 /* RRNavigationController.h in Headers */,
 				F9D598A12176362F003B85B7 /* _RRPopAnimator.h in Headers */,
@@ -241,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37894BFD21770E1A004F913A /* TabBar.storyboard in Resources */,
 				F9D5988721762DE7003B85B7 /* LaunchScreen.storyboard in Resources */,
 				F9D5988421762DE7003B85B7 /* Assets.xcassets in Resources */,
 				F9D5988221762DE6003B85B7 /* Main.storyboard in Resources */,
@@ -254,9 +258,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9D598A721764E66003B85B7 /* RRNavigationTransitioningDelegation.m in Sources */,
-				F9D5989E21763620003B85B7 /* _RRPushAnimator.m in Sources */,
+				F9D598A721764E66003B85B7 /* RRNavigationTransition.m in Sources */,
 				F9D5988D21762E08003B85B7 /* RRNavigationController.m in Sources */,
+				F9D5989E21763620003B85B7 /* _RRPushAnimator.m in Sources */,
 				F9D598A22176362F003B85B7 /* _RRPopAnimator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

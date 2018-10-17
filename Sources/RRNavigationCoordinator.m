@@ -1,16 +1,16 @@
 //
-//  RRNavigationTransitioningDelegation.m
+//  RRNavigationTransition.m
 //  RRNavigationTransitioning
 //
 //  Created by Shaw on 10/17/18.
 //  Copyright © 2018 RedRain. All rights reserved.
 //
 
-#import "RRNavigationTransitioningDelegation.h"
+#import "RRNavigationTransition.h"
 #import "_RRPushAnimator.h"
 #import "_RRPopAnimator.h"
 
-@interface RRNavigationTransitioningDelegation()
+@interface RRNavigationTransition()
 @property (nonatomic, weak) UINavigationController *navigationController;
 
 @property (nonatomic, strong) UIScreenEdgePanGestureRecognizer *leftEdgePanGesture;
@@ -22,7 +22,7 @@
 
 @end
 
-@implementation RRNavigationTransitioningDelegation
+@implementation RRNavigationTransition
 
 - (instancetype)initWithNavigationController:(UINavigationController *)navigationController {
     self = [super init];
@@ -51,7 +51,7 @@
     
     switch (sender.state) {
         case UIGestureRecognizerStateBegan:
-            if (!self.interactiveTransition && self.navigationController.viewControllers.count > 0) {
+            if (!self.interactiveTransition && self.navigationController.viewControllers.count > 1) {
                 self.interactiveTransition = [UIPercentDrivenInteractiveTransition new];
                 self.interactiveTransition.completionCurve = UIViewAnimationCurveEaseOut;
                 [self.navigationController popViewControllerAnimated:YES];

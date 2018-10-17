@@ -8,6 +8,8 @@
 
 #import "_RRPushAnimator.h"
 
+UIViewAnimationOptions const  _RRViewAnimationOptionCurvekeyboard = 7 << 16;
+
 @implementation _RRPushAnimator
 
 - (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext {
@@ -15,21 +17,28 @@
 }
 
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
+    UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-    if (!toVC) {
+    if (!fromVC || !toVC) {
         return;
     }
-    
+
     [toVC.view layoutIfNeeded];
     UIView *containerView = transitionContext.containerView;
-    toVC.view.frame = CGRectOffset(containerView.bounds, containerView.frame.size.width, 0);
     [containerView addSubview:toVC.view];
+    toVC.view.transform = CGAffineTransformMakeTranslation(containerView.bounds.size.width, 0);
+    
+    UITabBar *tabBar = toVC.tabBarController.tabBar;
+    if (tabBar && !fromVC.hidesBottomBarWhenPushed && toVC.hidesBottomBarWhenPushed) {
+//        [containerView insertSubview:tabBar belowSubview:toVC.view];
+        // FIXME:
+    }
     
     [UIView animateWithDuration:[self transitionDuration:transitionContext]
                           delay:0
-                        options:7 << 16 | UIViewAnimationOptionBeginFromCurrentState
+                        options:_RRViewAnimationOptionCurvekeyboard | UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
-                         toVC.view.frame = containerView.bounds;
+                         toVC.view.transform = CGAffineTransformIdentity;
                      } completion:^(BOOL finished) {
                          [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
                      }];

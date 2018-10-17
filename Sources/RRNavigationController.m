@@ -7,24 +7,24 @@
 //
 
 #import "RRNavigationController.h"
-#import "RRNavigationTransitioningDelegation.h"
+#import "RRNavigationTransition.h"
 
 @interface RRNavigationController () <UINavigationControllerDelegate>
-@property (nonatomic, strong) RRNavigationTransitioningDelegation *rrDelegate;
+@property (nonatomic, strong) RRNavigationTransition *rrTransition;
 @end
 
 @implementation RRNavigationController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.delegate = self.rrDelegate;
+    self.delegate = self.rrTransition;
 }
 
-- (RRNavigationTransitioningDelegation *)rrDelegate {
-    if (!_rrDelegate) {
-        _rrDelegate = [[RRNavigationTransitioningDelegation alloc] initWithNavigationController:self];
+- (RRNavigationTransition *)rrTransition {
+    if (!_rrTransition) {
+        _rrTransition = [[RRNavigationTransition alloc] initWithNavigationController:self];
     }
-    return _rrDelegate;
+    return _rrTransition;
 }
 
 @end

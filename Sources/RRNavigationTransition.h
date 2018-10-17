@@ -1,5 +1,5 @@
 //
-//  RRNavigationTransitioningDelegation.h
+//  RRNavigationTransition.h
 //  RRNavigationTransitioning
 //
 //  Created by Shaw on 10/17/18.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RRNavigationTransitioningDelegation : NSObject <UINavigationControllerDelegate>
+@interface RRNavigationTransition : NSObject <UINavigationControllerDelegate>
 
 - (instancetype)initWithNavigationController:(UINavigationController *)navigationController;
 
