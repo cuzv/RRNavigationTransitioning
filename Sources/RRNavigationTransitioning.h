@@ -16,5 +16,4 @@ FOUNDATION_EXPORT const unsigned char RRNavigationTransitioningVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <RRNavigationTransitioning/PublicHeader.h>
 
-#import <RRNavigationTransitioning/RRNavigationController.h>
 #import <RRNavigationTransitioning/RRNavigationTransition.h>

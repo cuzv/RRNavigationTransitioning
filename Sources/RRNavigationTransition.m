@@ -11,7 +11,6 @@
 #import "_RRPopAnimator.h"
 
 @interface RRNavigationTransition()
-@property (nonatomic, weak) UINavigationController *navigationController;
 
 @property (nonatomic, strong) UIScreenEdgePanGestureRecognizer *leftEdgePanGesture;
 @property (nonatomic, strong) UIScreenEdgePanGestureRecognizer *rightEdgePanGesture;
@@ -30,7 +29,7 @@
         return nil;
     }
     
-    self.navigationController = navigationController;
+    _navigationController = navigationController;
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
     [self.navigationController.view addGestureRecognizer:self.leftEdgePanGesture];
     [self.navigationController.view addGestureRecognizer:self.rightEdgePanGesture];

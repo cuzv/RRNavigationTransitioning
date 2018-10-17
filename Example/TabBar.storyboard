@@ -140,10 +140,10 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
             </objects>
             <point key="canvasLocation" x="3345" y="779"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Base Navigation Controller-->
         <scene sceneID="4HL-de-I2Q">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jaS-sm-CaZ" customClass="RRNavigationController" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jaS-sm-CaZ" customClass="BaseNavigationController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="recents" id="lfq-lG-EaS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1gn-jq-8FP">
