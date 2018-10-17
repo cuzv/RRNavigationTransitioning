@@ -29,9 +29,12 @@ UIViewAnimationOptions const  _RRViewAnimationOptionCurvekeyboard = 7 << 16;
     toVC.view.transform = CGAffineTransformMakeTranslation(containerView.bounds.size.width, 0);
     
     UITabBar *tabBar = toVC.tabBarController.tabBar;
+    BOOL shouldHide = NO;
     if (tabBar && !fromVC.hidesBottomBarWhenPushed && toVC.hidesBottomBarWhenPushed) {
-//        [containerView insertSubview:tabBar belowSubview:toVC.view];
+        [containerView insertSubview:tabBar belowSubview:toVC.view];
         // FIXME:
+//        [tabBar setHidden:YES];
+        [tabBar.layer removeAllAnimations];
     }
     
     [UIView animateWithDuration:[self transitionDuration:transitionContext]
@@ -40,6 +43,10 @@ UIViewAnimationOptions const  _RRViewAnimationOptionCurvekeyboard = 7 << 16;
                      animations:^{
                          toVC.view.transform = CGAffineTransformIdentity;
                      } completion:^(BOOL finished) {
+                         CGRect newRect = tabBar.frame;
+                         newRect.origin.x = 0;
+                         tabBar.frame = newRect;
+                         
                          [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
                      }];
 }
