@@ -15,7 +15,7 @@
 
 @property (nonatomic, strong) UIScreenEdgePanGestureRecognizer *leftEdgePanGesture;
 @property (nonatomic, strong) UIScreenEdgePanGestureRecognizer *rightEdgePanGesture;
-@property (nonatomic, retain) UIPercentDrivenInteractiveTransition *interactiveTransition;
+@property (nonatomic, strong) UIPercentDrivenInteractiveTransition *interactiveTransition;
 @property (nonatomic, assign) BOOL popFromRightEdge;
 
 @end
