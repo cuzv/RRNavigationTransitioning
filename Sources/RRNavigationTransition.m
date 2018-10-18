@@ -18,8 +18,6 @@
 @property (nonatomic, retain) UIPercentDrivenInteractiveTransition *interactiveTransition;
 @property (nonatomic, assign) BOOL popFromRightEdge;
 
-@property (nonatomic, strong) UIPanGestureRecognizer *panGestureRecognizer;
-
 @end
 
 @implementation RRNavigationTransition
