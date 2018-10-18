@@ -9,6 +9,7 @@
 #import "RRNavigationTransition.h"
 #import "_RRPushAnimator.h"
 #import "_RRPopAnimator.h"
+#import "UIViewController+RRNavigationTransitioning.h"
 
 @interface RRNavigationTransition()
 
@@ -39,6 +40,10 @@
 
 - (void)handleEdgePanGesture:(UIScreenEdgePanGestureRecognizer *)sender {
     NSAssert(nil != sender.view, @"UIScreenEdgePanGestureRecognizer must attach to a responser view.");
+    
+    if (!self.navigationController.topViewController.rr_interactivePopEnabled) {
+        return;
+    }
     
     self.popFromRightEdge = sender.edges == UIRectEdgeRight;
     

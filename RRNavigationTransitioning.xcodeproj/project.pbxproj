@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		37894BFD21770E1A004F913A /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37894BFC21770E1A004F913A /* TabBar.storyboard */; };
-		F93431112177611000595DD2 /* UITabBar+RRSwizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = F934310F2177611000595DD2 /* UITabBar+RRSwizzle.h */; };
-		F93431122177611000595DD2 /* UITabBar+RRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = F93431102177611000595DD2 /* UITabBar+RRSwizzle.m */; };
+		F93431112177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F934310F2177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.h */; };
+		F93431122177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = F93431102177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.m */; };
 		F934313821776D8700595DD2 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F934313721776D8700595DD2 /* BaseNavigationController.swift */; };
+		F934313B2178C34900595DD2 /* UIViewController+RRNavigationTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = F93431392178C34900595DD2 /* UIViewController+RRNavigationTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F934313C2178C34900595DD2 /* UIViewController+RRNavigationTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = F934313A2178C34900595DD2 /* UIViewController+RRNavigationTransitioning.m */; };
 		F9D5985621762D9D003B85B7 /* RRNavigationTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D5985421762D9D003B85B7 /* RRNavigationTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9D5987D21762DE6003B85B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5987C21762DE6003B85B7 /* AppDelegate.swift */; };
 		F9D5987F21762DE6003B85B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5987E21762DE6003B85B7 /* ViewController.swift */; };
@@ -53,9 +55,11 @@
 
 /* Begin PBXFileReference section */
 		37894BFC21770E1A004F913A /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
-		F934310F2177611000595DD2 /* UITabBar+RRSwizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITabBar+RRSwizzle.h"; sourceTree = "<group>"; };
-		F93431102177611000595DD2 /* UITabBar+RRSwizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+RRSwizzle.m"; sourceTree = "<group>"; };
+		F934310F2177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITabBar+RRNavigationTransitioning_Internal.h"; sourceTree = "<group>"; };
+		F93431102177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+RRNavigationTransitioning_Internal.m"; sourceTree = "<group>"; };
 		F934313721776D8700595DD2 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		F93431392178C34900595DD2 /* UIViewController+RRNavigationTransitioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RRNavigationTransitioning.h"; sourceTree = "<group>"; };
+		F934313A2178C34900595DD2 /* UIViewController+RRNavigationTransitioning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RRNavigationTransitioning.m"; sourceTree = "<group>"; };
 		F9D5985121762D9D003B85B7 /* RRNavigationTransitioning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RRNavigationTransitioning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D5985421762D9D003B85B7 /* RRNavigationTransitioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRNavigationTransitioning.h; sourceTree = "<group>"; };
 		F9D5985521762D9D003B85B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -122,8 +126,10 @@
 				F9D5989C21763620003B85B7 /* _RRPushAnimator.m */,
 				F9D5989F2176362F003B85B7 /* _RRPopAnimator.h */,
 				F9D598A02176362F003B85B7 /* _RRPopAnimator.m */,
-				F934310F2177611000595DD2 /* UITabBar+RRSwizzle.h */,
-				F93431102177611000595DD2 /* UITabBar+RRSwizzle.m */,
+				F934310F2177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.h */,
+				F93431102177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.m */,
+				F93431392178C34900595DD2 /* UIViewController+RRNavigationTransitioning.h */,
+				F934313A2178C34900595DD2 /* UIViewController+RRNavigationTransitioning.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -151,8 +157,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9D5989D21763620003B85B7 /* _RRPushAnimator.h in Headers */,
+				F934313B2178C34900595DD2 /* UIViewController+RRNavigationTransitioning.h in Headers */,
 				F9D598A621764E66003B85B7 /* RRNavigationTransition.h in Headers */,
-				F93431112177611000595DD2 /* UITabBar+RRSwizzle.h in Headers */,
+				F93431112177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.h in Headers */,
 				F9D5985621762D9D003B85B7 /* RRNavigationTransitioning.h in Headers */,
 				F9D598A12176362F003B85B7 /* _RRPopAnimator.h in Headers */,
 			);
@@ -262,8 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9D598A721764E66003B85B7 /* RRNavigationTransition.m in Sources */,
-				F93431122177611000595DD2 /* UITabBar+RRSwizzle.m in Sources */,
+				F93431122177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.m in Sources */,
 				F9D5989E21763620003B85B7 /* _RRPushAnimator.m in Sources */,
+				F934313C2178C34900595DD2 /* UIViewController+RRNavigationTransitioning.m in Sources */,
 				F9D598A22176362F003B85B7 /* _RRPopAnimator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

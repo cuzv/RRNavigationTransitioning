@@ -7,9 +7,9 @@
 //
 
 #import "_RRPushAnimator.h"
-#import "UITabBar+RRSwizzle.h"
+#import "UITabBar+RRNavigationTransitioning_Internal.h"
 
-UIViewAnimationOptions const  _RRViewAnimationOptionCurvekeyboard = 7 << 16;
+UIViewAnimationOptions const  _RRViewAnimationOptionCurveKeyboard = 7 << 16;
 
 @implementation _RRPushAnimator
 
@@ -38,7 +38,7 @@ UIViewAnimationOptions const  _RRViewAnimationOptionCurvekeyboard = 7 << 16;
     
     [UIView animateWithDuration:[self transitionDuration:transitionContext]
                           delay:0
-                        options:_RRViewAnimationOptionCurvekeyboard | UIViewAnimationOptionBeginFromCurrentState
+                        options:_RRViewAnimationOptionCurveKeyboard | UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
                          toVC.view.transform = CGAffineTransformIdentity;
                      } completion:^(BOOL finished) {

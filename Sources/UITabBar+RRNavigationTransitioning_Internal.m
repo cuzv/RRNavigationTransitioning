@@ -1,15 +1,15 @@
 //
-//  UITabBar+RRSwizzle.m
+//  UITabBar+RRNavigationTransitioning_Internal.m
 //  RRNavigationTransitioning
 //
 //  Created by Shaw on 10/17/18.
 //  Copyright © 2018 RedRain. All rights reserved.
 //
 
-#import "UITabBar+RRSwizzle.h"
+#import "UITabBar+RRNavigationTransitioning_Internal.h"
 #import <objc/runtime.h>
 
-@implementation UITabBar (RRSwizzle)
+@implementation UITabBar (RRNavigationTransitioning_Internal)
 
 + (void)load {
     static dispatch_once_t onceToken;

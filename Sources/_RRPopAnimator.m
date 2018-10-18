@@ -8,7 +8,7 @@
 
 #import "_RRPopAnimator.h"
 
-extern UIViewAnimationOptions const _RRViewAnimationOptionCurvekeyboard;
+extern UIViewAnimationOptions const _RRViewAnimationOptionCurveKeyboard;
 
 @implementation _RRPopAnimator
 
@@ -47,7 +47,7 @@ extern UIViewAnimationOptions const _RRViewAnimationOptionCurvekeyboard;
     if (self.fromRight) {
         offset *= -1;
     }
-    UIViewAnimationOptions options = (self.interactive ? UIViewAnimationOptionCurveLinear : _RRViewAnimationOptionCurvekeyboard) | UIViewAnimationOptionBeginFromCurrentState;
+    UIViewAnimationOptions options = (self.interactive ? UIViewAnimationOptionCurveLinear : _RRViewAnimationOptionCurveKeyboard) | UIViewAnimationOptionBeginFromCurrentState;
     [UIView animateWithDuration:[self transitionDuration:transitionContext]
                           delay:0
                         options:options
