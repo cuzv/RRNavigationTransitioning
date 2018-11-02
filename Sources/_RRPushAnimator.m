@@ -44,12 +44,10 @@ UIViewAnimationOptions const  _RRViewAnimationOptionCurveKeyboard = 7 << 16;
         return;
     }
 
-    fromVC.view.userInteractionEnabled = NO;
-    toVC.view.userInteractionEnabled = NO;
-    [toVC.view layoutIfNeeded];
-    
     UIView *containerView = transitionContext.containerView;
+    containerView.userInteractionEnabled = NO;
     [containerView addSubview:toVC.view];
+    [toVC.view layoutIfNeeded];
     toVC.view.transform = CGAffineTransformMakeTranslation(containerView.bounds.size.width, 0);
     
     UITabBarController *tabBarController = fromVC.tabBarController;
@@ -65,6 +63,7 @@ UIViewAnimationOptions const  _RRViewAnimationOptionCurveKeyboard = 7 << 16;
                      animations:^{
                          toVC.view.transform = CGAffineTransformIdentity;
                      } completion:^(BOOL finished) {
+                         containerView.userInteractionEnabled = YES;
                          if ([containerView.subviews containsObject:tabBar]) {
                              [tabBarController.view addSubview:tabBar];
                          }
@@ -72,9 +71,6 @@ UIViewAnimationOptions const  _RRViewAnimationOptionCurveKeyboard = 7 << 16;
                          if (tabBar._rr_pushing) {
                              tabBar._rr_pushing = NO;
                          }
-                         
-                         fromVC.view.userInteractionEnabled = YES;
-                         toVC.view.userInteractionEnabled = YES;
                          
                          if (transitionContext.transitionWasCancelled) {
                              [transitionContext cancelInteractiveTransition];

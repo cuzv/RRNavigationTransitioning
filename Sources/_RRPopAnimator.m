@@ -43,9 +43,6 @@ extern UIViewAnimationOptions const _RRViewAnimationOptionCurveKeyboard;
         return;
     }
     
-    fromVC.view.userInteractionEnabled = NO;
-    toVC.view.userInteractionEnabled = NO;
-
     fromVC.view.layer.shadowColor = [UIColor.blackColor colorWithAlphaComponent:0.5].CGColor;
     fromVC.view.layer.shadowOpacity = 1.0f;
     fromVC.view.layer.shadowOffset = CGSizeMake(0, 0);
@@ -53,9 +50,10 @@ extern UIViewAnimationOptions const _RRViewAnimationOptionCurveKeyboard;
     fromVC.view.layer.masksToBounds = NO;
     fromVC.view.layer.shadowPath = [UIBezierPath bezierPathWithRect:CGRectInset(fromVC.view.bounds, 0, 4)].CGPath;
     
-    [toVC.view layoutIfNeeded];
     UIView *containerView = transitionContext.containerView;
+    containerView.userInteractionEnabled = NO;
     [containerView insertSubview:toVC.view belowSubview:fromVC.view];
+    [toVC.view layoutIfNeeded];
     
     UITabBarController *tabBarController = toVC.tabBarController;
     UITabBar *tabBar = tabBarController.tabBar;
@@ -77,13 +75,11 @@ extern UIViewAnimationOptions const _RRViewAnimationOptionCurveKeyboard;
                      animations:^{
                          fromVC.view.transform = CGAffineTransformMakeTranslation(offset, 0);
                      } completion:^(BOOL finished) {
+                         containerView.userInteractionEnabled = YES;
                          if ([containerView.subviews containsObject:tabBar]) {
                              [tabBarController.view addSubview:tabBar];
                          }
-                         
-                         fromVC.view.userInteractionEnabled = YES;
-                         toVC.view.userInteractionEnabled = YES;
-                         
+
                          if (transitionContext.transitionWasCancelled) {
                              [transitionContext cancelInteractiveTransition];
                              [transitionContext completeTransition:NO];
