@@ -27,55 +27,55 @@
 #import "UITabBar+RRNavigationTransitioning_Internal.h"
 #import <objc/runtime.h>
 
-CF_INLINE BOOL _RRInstanceMethodSwizzle(Class _Nonnull targetClass,
-                                SEL _Nonnull targetSelector,
-                                id _Nonnull (^blockImpl)(Class _Nonnull originalClass, SEL _Nonnull originalSelector, IMP _Nonnull originalImpl))
-{
-    Method originalMethod = class_getInstanceMethod(targetClass, targetSelector);
-    if (!originalMethod) return NO;
-    
-    IMP originalImpl = method_getImplementation(originalMethod);
-    method_setImplementation(originalMethod, imp_implementationWithBlock(blockImpl(targetClass, targetSelector, originalImpl)));
-    return YES;
-}
-
 @implementation UITabBar (RRNavigationTransitioning_Internal)
 
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        {
+#ifdef __IPHONE_2_0
+        if (@available(iOS 2.0, *)) {
             Class clazz = self.class;
-            if (!clazz) return;
-            
-            _RRInstanceMethodSwizzle(clazz, @selector(setFrame:), ^id _Nonnull(Class  _Nonnull __unsafe_unretained originalClass, SEL  _Nonnull originalSelector, IMP  _Nonnull originalImpl) {
-                return ^(UITabBar *obj, CGRect arg) {
-                    if ([obj isKindOfClass:originalClass] && obj._rr_pushing) return;
-
+            SEL originalSelector = @selector(setFrame:);
+            Method originalMethod = class_getInstanceMethod(clazz, originalSelector);
+            if (originalMethod) {
+                IMP originalImpl = method_getImplementation(originalMethod);
+                id block = ^(UITabBar *receiver, CGRect frame) {
+                    if ([receiver isKindOfClass:clazz]) {
+                        if (receiver._rr_pushing)
+                            return;
+                    }
+                    
                     // Invoke original impl.
-                    ((void (*)(id, SEL, CGRect))originalImpl)(obj, originalSelector, arg);
+                    ((void (*)(id, SEL, CGRect))originalImpl)(receiver, originalSelector, frame);
                 };
-            });
+                IMP overrideImpl = imp_implementationWithBlock(block);
+                method_setImplementation(originalMethod, overrideImpl);
+            }
         }
+#endif
         
 #ifdef __IPHONE_12_1
         // See: https://github.com/QMUI/QMUI_iOS/issues/410#issuecomment-432574291
         if (@available(iOS 12.1, *)) {
             Class clazz = NSClassFromString(@"UITabBarButton");
             if (!clazz) return;
-
-            _RRInstanceMethodSwizzle(clazz, @selector(setFrame:), ^id _Nonnull(Class  _Nonnull __unsafe_unretained originalClass, SEL  _Nonnull originalSelector, IMP  _Nonnull originalImpl) {
-                return ^(UIView *obj, CGRect arg) {
-                    if ([obj isKindOfClass:originalClass]) {
-                        if (!CGRectIsEmpty(obj.frame) && CGRectIsEmpty(arg)) {
+            SEL originalSelector = @selector(setFrame:);
+            Method originalMethod = class_getInstanceMethod(clazz, originalSelector);
+            if (originalMethod) {
+                IMP originalImpl = method_getImplementation(originalMethod);
+                id block = ^(UIView *receiver, CGRect frame) {
+                    if ([receiver isKindOfClass:clazz]) {
+                        if (!CGRectIsEmpty(receiver.frame) && CGRectIsEmpty(frame)) {
                             return;
                         }
                     }
                     
                     // Invoke original impl.
-                    ((void (*)(id, SEL, CGRect))originalImpl)(obj, originalSelector, arg);
+                    ((void (*)(id, SEL, CGRect))originalImpl)(receiver, originalSelector, frame);
                 };
-            });
+                IMP overrideImpl = imp_implementationWithBlock(block);
+                method_setImplementation(originalMethod, overrideImpl);
+            }
         }
 #endif
     });
