@@ -91,8 +91,10 @@
             }
 
             if (percent > 0.5 || velocity > 250) {
+                [self.interactiveTransition updateInteractiveTransition:1.0];
                 [self.interactiveTransition finishInteractiveTransition];
             } else {
+                [self.interactiveTransition updateInteractiveTransition:0.0];
                 [self.interactiveTransition cancelInteractiveTransition];
             }
             self.interactiveTransition = nil;

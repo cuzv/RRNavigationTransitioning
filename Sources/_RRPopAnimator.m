@@ -79,14 +79,8 @@ extern UIViewAnimationOptions const _RRViewAnimationOptionCurveKeyboard;
                          if ([containerView.subviews containsObject:tabBar]) {
                              [tabBarController.view addSubview:tabBar];
                          }
-
-                         if (transitionContext.transitionWasCancelled) {
-                             [transitionContext cancelInteractiveTransition];
-                             [transitionContext completeTransition:NO];
-                         } else {
-                             [transitionContext finishInteractiveTransition];
-                             [transitionContext completeTransition:YES];
-                         }
+                         
+                         [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
                      }];
 }
 

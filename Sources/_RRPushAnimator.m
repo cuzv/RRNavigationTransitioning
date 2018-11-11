@@ -72,13 +72,7 @@ UIViewAnimationOptions const  _RRViewAnimationOptionCurveKeyboard = 7 << 16;
                              tabBar._rr_pushing = NO;
                          }
                          
-                         if (transitionContext.transitionWasCancelled) {
-                             [transitionContext cancelInteractiveTransition];
-                             [transitionContext completeTransition:NO];
-                         } else {
-                             [transitionContext finishInteractiveTransition];
-                             [transitionContext completeTransition:YES];
-                         }
+                         [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
                      }];
 }
 
