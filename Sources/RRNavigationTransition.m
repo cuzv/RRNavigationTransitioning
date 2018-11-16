@@ -73,7 +73,6 @@
         case UIGestureRecognizerStateBegan:
             if (!self.interactiveTransition && self.navigationController.viewControllers.count > 1) {
                 self.interactiveTransition = [UIPercentDrivenInteractiveTransition new];
-                self.interactiveTransition.completionCurve = UIViewAnimationCurveEaseOut;
                 [self.navigationController popViewControllerAnimated:YES];
             }
             break;
@@ -91,10 +90,8 @@
             }
 
             if (percent > 0.5 || velocity > 250) {
-                [self.interactiveTransition updateInteractiveTransition:1.0];
                 [self.interactiveTransition finishInteractiveTransition];
             } else {
-                [self.interactiveTransition updateInteractiveTransition:0.0];
                 [self.interactiveTransition cancelInteractiveTransition];
             }
             self.interactiveTransition = nil;
