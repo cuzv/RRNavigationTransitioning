@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RRNavigationTransitioning"
-  s.version      = "1.0.0"
+  s.version      = "1.1.0"
   s.summary      = "RRNavigationTransitioning helps run interactive navigation transition by screen both sides edge in landscape orientation."
 
   s.homepage     = "https://github.com/cuzv/RRNavigationTransitioning.git"

@@ -25,6 +25,7 @@
 //
 
 #import "_RRPopAnimator.h"
+#import "UITabBar+RRNavigationTransitioning_Internal.h"
 
 extern UIViewAnimationOptions const _RRViewAnimationOptionCurveKeyboard;
 
@@ -36,50 +37,56 @@ extern UIViewAnimationOptions const _RRViewAnimationOptionCurveKeyboard;
 
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
     UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    UIView *fromView = [transitionContext viewForKey:UITransitionContextFromViewKey];
     UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-    if (!fromVC || !toVC) {
-        [transitionContext cancelInteractiveTransition];
+    UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
+    
+    if (!(fromVC && fromView && toVC && toView)) {
         [transitionContext completeTransition:NO];
         return;
     }
     
-    fromVC.view.layer.shadowColor = [UIColor.blackColor colorWithAlphaComponent:0.5].CGColor;
-    fromVC.view.layer.shadowOpacity = 1.0f;
-    fromVC.view.layer.shadowOffset = CGSizeMake(0, 0);
-    fromVC.view.layer.shadowRadius = 4.0f;
-    fromVC.view.layer.masksToBounds = NO;
-    fromVC.view.layer.shadowPath = [UIBezierPath bezierPathWithRect:CGRectInset(fromVC.view.bounds, 0, 4)].CGPath;
+    fromView.layer.shadowColor = [UIColor.blackColor colorWithAlphaComponent:0.5].CGColor;
+    fromView.layer.shadowOpacity = 1.0f;
+    fromView.layer.shadowOffset = CGSizeMake(0, 0);
+    fromView.layer.shadowRadius = 4.0f;
+    fromView.layer.masksToBounds = NO;
+    fromView.layer.shadowPath = [UIBezierPath bezierPathWithRect:CGRectInset(fromView.bounds, 0, 4)].CGPath;
     
     UIView *containerView = transitionContext.containerView;
-    containerView.userInteractionEnabled = NO;
-    [containerView insertSubview:toVC.view belowSubview:fromVC.view];
-    [toVC.view layoutIfNeeded];
+    [containerView insertSubview:toView belowSubview:fromView];
+    [toView layoutIfNeeded];
     
     UITabBarController *tabBarController = toVC.tabBarController;
     UITabBar *tabBar = tabBarController.tabBar;
     if (tabBar && fromVC.hidesBottomBarWhenPushed && !toVC.hidesBottomBarWhenPushed) {
         CGRect newRect = tabBar.frame;
-        newRect.origin.x = toVC.view.frame.origin.x;
+        newRect.origin.x = toView.frame.origin.x;
         tabBar.frame = newRect;
-        [containerView insertSubview:tabBar belowSubview:fromVC.view];
+        [containerView insertSubview:tabBar belowSubview:fromView];
+        tabBar._rr_inTransition = YES;
     }
     
     CGFloat offset = containerView.frame.size.width;
     if (self.fromRight) {
         offset *= -1;
     }
+
     UIViewAnimationOptions options = (self.interactive ? UIViewAnimationOptionCurveLinear : _RRViewAnimationOptionCurveKeyboard) | UIViewAnimationOptionBeginFromCurrentState;
     [UIView animateWithDuration:[self transitionDuration:transitionContext]
                           delay:0
                         options:options
                      animations:^{
-                         fromVC.view.transform = CGAffineTransformMakeTranslation(offset, 0);
+                         fromView.transform = CGAffineTransformMakeTranslation(offset, 0);
                      } completion:^(BOOL finished) {
-                         containerView.userInteractionEnabled = YES;
                          if ([containerView.subviews containsObject:tabBar]) {
                              [tabBarController.view addSubview:tabBar];
                          }
-                         
+
+                         if (tabBar._rr_inTransition) {
+                             tabBar._rr_inTransition = NO;
+                         }
+
                          [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
                      }];
 }

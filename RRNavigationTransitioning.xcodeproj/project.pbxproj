@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		37894BFD21770E1A004F913A /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37894BFC21770E1A004F913A /* TabBar.storyboard */; };
+		F91534F724C2E1AC000C99B9 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91534F624C2E1AC000C99B9 /* DetailVC.swift */; };
+		F91534F924C2E1CE000C99B9 /* TailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91534F824C2E1CE000C99B9 /* TailVC.swift */; };
 		F93431112177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F934310F2177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.h */; };
 		F93431122177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = F93431102177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.m */; };
 		F934313821776D8700595DD2 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F934313721776D8700595DD2 /* BaseNavigationController.swift */; };
@@ -16,7 +18,6 @@
 		F9D5985621762D9D003B85B7 /* RRNavigationTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D5985421762D9D003B85B7 /* RRNavigationTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9D5987D21762DE6003B85B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5987C21762DE6003B85B7 /* AppDelegate.swift */; };
 		F9D5987F21762DE6003B85B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5987E21762DE6003B85B7 /* ViewController.swift */; };
-		F9D5988221762DE6003B85B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D5988021762DE6003B85B7 /* Main.storyboard */; };
 		F9D5988421762DE7003B85B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9D5988321762DE7003B85B7 /* Assets.xcassets */; };
 		F9D5988721762DE7003B85B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D5988521762DE7003B85B7 /* LaunchScreen.storyboard */; };
 		F9D59892217630C9003B85B7 /* RRNavigationTransitioning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D5985121762D9D003B85B7 /* RRNavigationTransitioning.framework */; };
@@ -55,6 +56,8 @@
 
 /* Begin PBXFileReference section */
 		37894BFC21770E1A004F913A /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		F91534F624C2E1AC000C99B9 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		F91534F824C2E1CE000C99B9 /* TailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TailVC.swift; sourceTree = "<group>"; };
 		F934310F2177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITabBar+RRNavigationTransitioning_Internal.h"; sourceTree = "<group>"; };
 		F93431102177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+RRNavigationTransitioning_Internal.m"; sourceTree = "<group>"; };
 		F934313721776D8700595DD2 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
@@ -66,7 +69,6 @@
 		F9D5987A21762DE6003B85B7 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D5987C21762DE6003B85B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9D5987E21762DE6003B85B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F9D5988121762DE6003B85B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F9D5988321762DE7003B85B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9D5988621762DE7003B85B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9D5988821762DE7003B85B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -138,13 +140,14 @@
 			isa = PBXGroup;
 			children = (
 				F9D5987C21762DE6003B85B7 /* AppDelegate.swift */,
+				F934313721776D8700595DD2 /* BaseNavigationController.swift */,
 				F9D5987E21762DE6003B85B7 /* ViewController.swift */,
-				F9D5988021762DE6003B85B7 /* Main.storyboard */,
+				F91534F624C2E1AC000C99B9 /* DetailVC.swift */,
+				F91534F824C2E1CE000C99B9 /* TailVC.swift */,
 				37894BFC21770E1A004F913A /* TabBar.storyboard */,
 				F9D5988321762DE7003B85B7 /* Assets.xcassets */,
 				F9D5988521762DE7003B85B7 /* LaunchScreen.storyboard */,
 				F9D5988821762DE7003B85B7 /* Info.plist */,
-				F934313721776D8700595DD2 /* BaseNavigationController.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -212,7 +215,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = RedRain;
 				TargetAttributes = {
 					F9D5985021762D9D003B85B7 = {
@@ -220,6 +223,7 @@
 					};
 					F9D5987921762DE6003B85B7 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1200;
 					};
 				};
 			};
@@ -257,7 +261,6 @@
 				37894BFD21770E1A004F913A /* TabBar.storyboard in Resources */,
 				F9D5988721762DE7003B85B7 /* LaunchScreen.storyboard in Resources */,
 				F9D5988421762DE7003B85B7 /* Assets.xcassets in Resources */,
-				F9D5988221762DE6003B85B7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +284,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F934313821776D8700595DD2 /* BaseNavigationController.swift in Sources */,
+				F91534F724C2E1AC000C99B9 /* DetailVC.swift in Sources */,
 				F9D5987F21762DE6003B85B7 /* ViewController.swift in Sources */,
+				F91534F924C2E1CE000C99B9 /* TailVC.swift in Sources */,
 				F9D5987D21762DE6003B85B7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,14 +302,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F9D5988021762DE6003B85B7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F9D5988121762DE6003B85B7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F9D5988521762DE7003B85B7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -342,6 +339,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -404,6 +402,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -428,6 +427,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -437,7 +437,7 @@
 		F9D5985A21762D9D003B85B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
@@ -487,7 +487,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XDN35K5RF2;
+				DEVELOPMENT_TEAM = P87H5KTT36;
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -498,7 +498,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -508,7 +508,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XDN35K5RF2;
+				DEVELOPMENT_TEAM = P87H5KTT36;
 				INFOPLIST_FILE = Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -519,7 +519,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

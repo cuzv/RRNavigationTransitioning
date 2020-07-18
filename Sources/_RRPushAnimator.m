@@ -38,38 +38,37 @@ UIViewAnimationOptions const  _RRViewAnimationOptionCurveKeyboard = 7 << 16;
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
     UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
-    if (!fromVC || !toVC) {
-        [transitionContext cancelInteractiveTransition];
+    UIView *toView = [transitionContext viewForKey:UITransitionContextToViewKey];
+
+    if (!(fromVC && toVC && toView)) {
         [transitionContext completeTransition:NO];
         return;
     }
 
     UIView *containerView = transitionContext.containerView;
-    containerView.userInteractionEnabled = NO;
-    [containerView addSubview:toVC.view];
-    [toVC.view layoutIfNeeded];
-    toVC.view.transform = CGAffineTransformMakeTranslation(containerView.bounds.size.width, 0);
+    [containerView addSubview:toView];
+    [toView layoutIfNeeded];
+    toView.transform = CGAffineTransformMakeTranslation(containerView.bounds.size.width, 0);
     
     UITabBarController *tabBarController = fromVC.tabBarController;
     UITabBar *tabBar = tabBarController.tabBar;
     if (tabBar && !fromVC.hidesBottomBarWhenPushed && toVC.hidesBottomBarWhenPushed) {
-        [containerView insertSubview:tabBar belowSubview:toVC.view];
-        tabBar._rr_pushing = YES;
+        [containerView insertSubview:tabBar belowSubview:toView];
+        tabBar._rr_inTransition = YES;
     }
     
     [UIView animateWithDuration:[self transitionDuration:transitionContext]
                           delay:0
                         options:_RRViewAnimationOptionCurveKeyboard | UIViewAnimationOptionBeginFromCurrentState
                      animations:^{
-                         toVC.view.transform = CGAffineTransformIdentity;
+                         toView.transform = CGAffineTransformIdentity;
                      } completion:^(BOOL finished) {
-                         containerView.userInteractionEnabled = YES;
                          if ([containerView.subviews containsObject:tabBar]) {
                              [tabBarController.view addSubview:tabBar];
                          }
                          
-                         if (tabBar._rr_pushing) {
-                             tabBar._rr_pushing = NO;
+                         if (tabBar._rr_inTransition) {
+                             tabBar._rr_inTransition = NO;
                          }
                          
                          [transitionContext completeTransition:!transitionContext.transitionWasCancelled];

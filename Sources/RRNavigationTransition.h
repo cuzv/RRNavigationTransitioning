@@ -32,6 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak, readonly) UINavigationController *navigationController;
 - (instancetype)initWithNavigationController:(UINavigationController *)navigationController;
+- (void)suppressGestureRecognizerInterferenceFrom:(UIGestureRecognizer *)sender;
 
 @end
 

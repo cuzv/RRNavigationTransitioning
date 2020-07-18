@@ -41,7 +41,7 @@
                 IMP originalImpl = method_getImplementation(originalMethod);
                 id block = ^(UITabBar *receiver, CGRect frame) {
                     if ([receiver isKindOfClass:clazz]) {
-                        if (receiver._rr_pushing)
+                        if (receiver._rr_inTransition)
                             return;
                     }
                     
@@ -81,12 +81,12 @@
     });
 }
 
-- (BOOL)_rr_pushing {
+- (BOOL)_rr_inTransition {
     return [objc_getAssociatedObject(self, _cmd) boolValue];
 }
 
-- (void)set_rr_pushing:(BOOL)_rr_pushing {
-    objc_setAssociatedObject(self, @selector(_rr_pushing), @(_rr_pushing), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)set_rr_inTransition:(BOOL)_rr_inTransition {
+    objc_setAssociatedObject(self, @selector(_rr_inTransition), @(_rr_inTransition), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end

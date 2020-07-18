@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YTl-e1-Jxw">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17132.0.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YTl-e1-Jxw">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17105.0.3"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,11 +13,11 @@
             <objects>
                 <viewController id="XW1-jP-2IC" customClass="ViewController" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pSu-FP-kiN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vox-Oo-7lL">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.
 
@@ -33,6 +32,7 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="13F-dA-Tjt"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="13F-dA-Tjt" firstAttribute="trailing" secondItem="vox-Oo-7lL" secondAttribute="trailing" id="2hz-hA-KVE"/>
@@ -40,7 +40,6 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                             <constraint firstItem="vox-Oo-7lL" firstAttribute="leading" secondItem="13F-dA-Tjt" secondAttribute="leading" id="NK1-nN-HD9"/>
                             <constraint firstItem="vox-Oo-7lL" firstAttribute="top" secondItem="13F-dA-Tjt" secondAttribute="top" id="ct7-fM-GS5"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="13F-dA-Tjt"/>
                     </view>
                     <navigationItem key="navigationItem" title="Timeline" id="AWv-Tp-A7W">
                         <barButtonItem key="rightBarButtonItem" title="Detail" id="FUc-XE-ehj">
@@ -57,13 +56,13 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
         <!--Detail-->
         <scene sceneID="Svm-Tj-bxc">
             <objects>
-                <viewController id="EuJ-d1-4Gm" sceneMemberID="viewController">
+                <viewController id="EuJ-d1-4Gm" customClass="DetailVC" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6su-IN-fpJ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FlK-W8-0Vb">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                                 <color key="backgroundColor" red="1" green="0.83096744720000004" blue="0.62631711779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.
 
@@ -78,14 +77,14 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="BE9-t4-bl5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="BE9-t4-bl5" firstAttribute="leading" secondItem="FlK-W8-0Vb" secondAttribute="leading" id="Vfs-l0-1T7"/>
                             <constraint firstItem="BE9-t4-bl5" firstAttribute="trailing" secondItem="FlK-W8-0Vb" secondAttribute="trailing" id="j3z-fB-4tv"/>
                             <constraint firstItem="BE9-t4-bl5" firstAttribute="top" secondItem="FlK-W8-0Vb" secondAttribute="top" id="npf-lM-phB"/>
-                            <constraint firstItem="BE9-t4-bl5" firstAttribute="bottom" secondItem="FlK-W8-0Vb" secondAttribute="bottom" id="qUd-6Z-rK7"/>
+                            <constraint firstAttribute="bottom" secondItem="FlK-W8-0Vb" secondAttribute="bottom" id="qUd-6Z-rK7"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="BE9-t4-bl5"/>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="8AS-hf-vcf">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="Jbc-2e-UH4">
@@ -102,13 +101,13 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
         <!--Detail 2-->
         <scene sceneID="lzY-vL-QIR">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="twC-RB-Xlw" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="twC-RB-Xlw" customClass="TailVC" customModule="Example" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mQK-X4-iMp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aw0-Bo-lUy">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                                 <color key="backgroundColor" red="0.2274509804" green="0.61960784310000006" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.
 
@@ -123,14 +122,14 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="FXY-1n-Fjq"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="FXY-1n-Fjq" firstAttribute="leading" secondItem="Aw0-Bo-lUy" secondAttribute="leading" id="3zj-Wr-rSz"/>
                             <constraint firstItem="FXY-1n-Fjq" firstAttribute="top" secondItem="Aw0-Bo-lUy" secondAttribute="top" id="XJy-IF-wMi"/>
-                            <constraint firstItem="FXY-1n-Fjq" firstAttribute="bottom" secondItem="Aw0-Bo-lUy" secondAttribute="bottom" id="XZF-Ra-21c"/>
+                            <constraint firstAttribute="bottom" secondItem="Aw0-Bo-lUy" secondAttribute="bottom" id="XZF-Ra-21c"/>
                             <constraint firstItem="FXY-1n-Fjq" firstAttribute="trailing" secondItem="Aw0-Bo-lUy" secondAttribute="trailing" id="beq-Cn-u3A"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="FXY-1n-Fjq"/>
                     </view>
                     <navigationItem key="navigationItem" title="Detail 2" id="fzR-Dt-ahT">
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="Pss-W4-Qzp"/>
@@ -147,7 +146,7 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
                     <tabBarItem key="tabBarItem" systemItem="recents" id="lfq-lG-EaS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1gn-jq-8FP">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -164,10 +163,10 @@ Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed 
             <objects>
                 <viewController id="ecL-MC-6gn" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g7o-qf-FAl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="NWO-E6-HiQ"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="more" id="KCp-BR-vqE"/>
                 </viewController>

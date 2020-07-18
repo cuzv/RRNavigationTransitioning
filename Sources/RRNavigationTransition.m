@@ -102,11 +102,19 @@
     }
 }
 
+- (void)suppressGestureRecognizerInterferenceFrom:(UIGestureRecognizer *)sender {
+    [sender requireGestureRecognizerToFail:self.leftEdgePanGesture];
+    [sender requireGestureRecognizerToFail:self.rightEdgePanGesture];
+}
+
 // MARK: - UINavigationControllerDelegate
 
 - (nullable id <UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController
-                                   interactionControllerForAnimationController:(id <UIViewControllerAnimatedTransitioning>) animationController {
-    return self.interactiveTransition;
+                                   interactionControllerForAnimationController:(id <UIViewControllerAnimatedTransitioning>)animationController {
+    if ([animationController isKindOfClass:_RRPopAnimator.class]) {
+        return self.interactiveTransition;
+    }
+    return nil;
 }
 
 - (nullable id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
