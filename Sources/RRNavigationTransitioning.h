@@ -24,15 +24,10 @@
 //  THE SOFTWARE.
 //
 
-#import <UIKit/UIKit.h>
+#ifndef RRNavigationTransitioning_h
+#define RRNavigationTransitioning_h
 
-//! Project version number for RRNavigationTransitioning.
-FOUNDATION_EXPORT double RRNavigationTransitioningVersionNumber;
+#import "RRNavigationTransition.h"
+#import "UIViewController+RRNavigationTransitioning.h"
 
-//! Project version string for RRNavigationTransitioning.
-FOUNDATION_EXPORT const unsigned char RRNavigationTransitioningVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <RRNavigationTransitioning/PublicHeader.h>
-
-#import <RRNavigationTransitioning/RRNavigationTransition.h>
-#import <RRNavigationTransitioning/UIViewController+RRNavigationTransitioning.h>
+#endif /* RRNavigationTransitioning_h */

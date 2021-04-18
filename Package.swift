@@ -14,6 +14,10 @@ let package = Package(
     dependencies: [
     ],
     targets: [
-        .target(name: "RRNavigationTransitioning", dependencies: [], path: "Sources")
+        .target(
+            name: "RRNavigationTransitioning",
+            path: "Sources",
+            publicHeadersPath: ""
+        ),
     ]
 )
