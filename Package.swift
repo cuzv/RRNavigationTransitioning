@@ -17,7 +17,11 @@ let package = Package(
         .target(
             name: "RRNavigationTransitioning",
             path: "Sources",
+            exclude: [
+                "Info.plist",
+            ],
             publicHeadersPath: ""
         ),
-    ]
+    ],
+    swiftLanguageVersions: [.v5]
 )

@@ -55,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		376C7FD5262EDB7D0015FCE0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37894BFC21770E1A004F913A /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		F91534F624C2E1AC000C99B9 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		F91534F824C2E1CE000C99B9 /* TailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TailVC.swift; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		F934313A2178C34900595DD2 /* UIViewController+RRNavigationTransitioning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RRNavigationTransitioning.m"; sourceTree = "<group>"; };
 		F9D5985121762D9D003B85B7 /* RRNavigationTransitioning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RRNavigationTransitioning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D5985421762D9D003B85B7 /* RRNavigationTransitioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRNavigationTransitioning.h; sourceTree = "<group>"; };
-		F9D5985521762D9D003B85B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9D5987A21762DE6003B85B7 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D5987C21762DE6003B85B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9D5987E21762DE6003B85B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 		F9D5985321762D9D003B85B7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				F9D5985521762D9D003B85B7 /* Info.plist */,
+				376C7FD5262EDB7D0015FCE0 /* Info.plist */,
 				F9D5985421762D9D003B85B7 /* RRNavigationTransitioning.h */,
 				F9D598A421764E66003B85B7 /* RRNavigationTransition.h */,
 				F9D598A521764E66003B85B7 /* RRNavigationTransition.m */,
