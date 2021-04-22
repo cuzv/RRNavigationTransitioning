@@ -20,7 +20,10 @@ let package = Package(
             exclude: [
                 "Info.plist",
             ],
-            publicHeadersPath: ""
+            publicHeadersPath: "",
+            cSettings: [
+                .headerSearchPath("Internal"),
+            ]
         ),
     ],
     swiftLanguageVersions: [.v5]

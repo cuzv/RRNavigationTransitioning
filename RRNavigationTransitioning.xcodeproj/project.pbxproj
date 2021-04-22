@@ -99,6 +99,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37EEA14B26314A75004F7BCE /* Inetrnal */ = {
+			isa = PBXGroup;
+			children = (
+				F934310F2177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.h */,
+				F93431102177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.m */,
+				F9D5989B21763620003B85B7 /* _RRPushAnimator.h */,
+				F9D5989C21763620003B85B7 /* _RRPushAnimator.m */,
+				F9D5989F2176362F003B85B7 /* _RRPopAnimator.h */,
+				F9D598A02176362F003B85B7 /* _RRPopAnimator.m */,
+			);
+			path = Inetrnal;
+			sourceTree = "<group>";
+		};
 		F9D5984721762D9D003B85B7 = {
 			isa = PBXGroup;
 			children = (
@@ -120,16 +133,11 @@
 		F9D5985321762D9D003B85B7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				37EEA14B26314A75004F7BCE /* Inetrnal */,
 				376C7FD5262EDB7D0015FCE0 /* Info.plist */,
 				F9D5985421762D9D003B85B7 /* RRNavigationTransitioning.h */,
 				F9D598A421764E66003B85B7 /* RRNavigationTransition.h */,
 				F9D598A521764E66003B85B7 /* RRNavigationTransition.m */,
-				F9D5989B21763620003B85B7 /* _RRPushAnimator.h */,
-				F9D5989C21763620003B85B7 /* _RRPushAnimator.m */,
-				F9D5989F2176362F003B85B7 /* _RRPopAnimator.h */,
-				F9D598A02176362F003B85B7 /* _RRPopAnimator.m */,
-				F934310F2177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.h */,
-				F93431102177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.m */,
 				F93431392178C34900595DD2 /* UIViewController+RRNavigationTransitioning.h */,
 				F934313A2178C34900595DD2 /* UIViewController+RRNavigationTransitioning.m */,
 			);
@@ -215,7 +223,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = RedRain;
 				TargetAttributes = {
 					F9D5985021762D9D003B85B7 = {
@@ -366,7 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -423,7 +431,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
