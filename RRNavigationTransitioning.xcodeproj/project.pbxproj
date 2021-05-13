@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3752BFB6264CCADF00075C95 /* _RRPopAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3752BFB0264CCADF00075C95 /* _RRPopAnimator.h */; };
+		3752BFB7264CCADF00075C95 /* UITabBar+RRNavigationTransitioning_Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 3752BFB1264CCADF00075C95 /* UITabBar+RRNavigationTransitioning_Internal.m */; };
+		3752BFB8264CCADF00075C95 /* _RRPushAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3752BFB2264CCADF00075C95 /* _RRPushAnimator.h */; };
+		3752BFB9264CCADF00075C95 /* _RRPopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3752BFB3264CCADF00075C95 /* _RRPopAnimator.m */; };
+		3752BFBA264CCADF00075C95 /* UITabBar+RRNavigationTransitioning_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 3752BFB4264CCADF00075C95 /* UITabBar+RRNavigationTransitioning_Internal.h */; };
+		3752BFBB264CCADF00075C95 /* _RRPushAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3752BFB5264CCADF00075C95 /* _RRPushAnimator.m */; };
 		37894BFD21770E1A004F913A /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37894BFC21770E1A004F913A /* TabBar.storyboard */; };
 		F91534F724C2E1AC000C99B9 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91534F624C2E1AC000C99B9 /* DetailVC.swift */; };
 		F91534F924C2E1CE000C99B9 /* TailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91534F824C2E1CE000C99B9 /* TailVC.swift */; };
-		F93431112177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.h in Headers */ = {isa = PBXBuildFile; fileRef = F934310F2177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.h */; };
-		F93431122177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = F93431102177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.m */; };
 		F934313821776D8700595DD2 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F934313721776D8700595DD2 /* BaseNavigationController.swift */; };
 		F934313B2178C34900595DD2 /* UIViewController+RRNavigationTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = F93431392178C34900595DD2 /* UIViewController+RRNavigationTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F934313C2178C34900595DD2 /* UIViewController+RRNavigationTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = F934313A2178C34900595DD2 /* UIViewController+RRNavigationTransitioning.m */; };
@@ -22,10 +26,6 @@
 		F9D5988721762DE7003B85B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9D5988521762DE7003B85B7 /* LaunchScreen.storyboard */; };
 		F9D59892217630C9003B85B7 /* RRNavigationTransitioning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D5985121762D9D003B85B7 /* RRNavigationTransitioning.framework */; };
 		F9D59893217630C9003B85B7 /* RRNavigationTransitioning.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9D5985121762D9D003B85B7 /* RRNavigationTransitioning.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F9D5989D21763620003B85B7 /* _RRPushAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D5989B21763620003B85B7 /* _RRPushAnimator.h */; };
-		F9D5989E21763620003B85B7 /* _RRPushAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D5989C21763620003B85B7 /* _RRPushAnimator.m */; };
-		F9D598A12176362F003B85B7 /* _RRPopAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D5989F2176362F003B85B7 /* _RRPopAnimator.h */; };
-		F9D598A22176362F003B85B7 /* _RRPopAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D598A02176362F003B85B7 /* _RRPopAnimator.m */; };
 		F9D598A621764E66003B85B7 /* RRNavigationTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D598A421764E66003B85B7 /* RRNavigationTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9D598A721764E66003B85B7 /* RRNavigationTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D598A521764E66003B85B7 /* RRNavigationTransition.m */; };
 /* End PBXBuildFile section */
@@ -55,12 +55,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3752BFB0264CCADF00075C95 /* _RRPopAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _RRPopAnimator.h; sourceTree = "<group>"; };
+		3752BFB1264CCADF00075C95 /* UITabBar+RRNavigationTransitioning_Internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+RRNavigationTransitioning_Internal.m"; sourceTree = "<group>"; };
+		3752BFB2264CCADF00075C95 /* _RRPushAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _RRPushAnimator.h; sourceTree = "<group>"; };
+		3752BFB3264CCADF00075C95 /* _RRPopAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _RRPopAnimator.m; sourceTree = "<group>"; };
+		3752BFB4264CCADF00075C95 /* UITabBar+RRNavigationTransitioning_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+RRNavigationTransitioning_Internal.h"; sourceTree = "<group>"; };
+		3752BFB5264CCADF00075C95 /* _RRPushAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _RRPushAnimator.m; sourceTree = "<group>"; };
 		376C7FD5262EDB7D0015FCE0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37894BFC21770E1A004F913A /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
 		F91534F624C2E1AC000C99B9 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		F91534F824C2E1CE000C99B9 /* TailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TailVC.swift; sourceTree = "<group>"; };
-		F934310F2177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITabBar+RRNavigationTransitioning_Internal.h"; sourceTree = "<group>"; };
-		F93431102177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+RRNavigationTransitioning_Internal.m"; sourceTree = "<group>"; };
 		F934313721776D8700595DD2 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		F93431392178C34900595DD2 /* UIViewController+RRNavigationTransitioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RRNavigationTransitioning.h"; sourceTree = "<group>"; };
 		F934313A2178C34900595DD2 /* UIViewController+RRNavigationTransitioning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RRNavigationTransitioning.m"; sourceTree = "<group>"; };
@@ -72,10 +76,6 @@
 		F9D5988321762DE7003B85B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F9D5988621762DE7003B85B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9D5988821762DE7003B85B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9D5989B21763620003B85B7 /* _RRPushAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _RRPushAnimator.h; sourceTree = "<group>"; };
-		F9D5989C21763620003B85B7 /* _RRPushAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _RRPushAnimator.m; sourceTree = "<group>"; };
-		F9D5989F2176362F003B85B7 /* _RRPopAnimator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _RRPopAnimator.h; sourceTree = "<group>"; };
-		F9D598A02176362F003B85B7 /* _RRPopAnimator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _RRPopAnimator.m; sourceTree = "<group>"; };
 		F9D598A421764E66003B85B7 /* RRNavigationTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRNavigationTransition.h; sourceTree = "<group>"; };
 		F9D598A521764E66003B85B7 /* RRNavigationTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRNavigationTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,17 +99,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		37EEA14B26314A75004F7BCE /* Inetrnal */ = {
+		3752BFAF264CCADF00075C95 /* Internal */ = {
 			isa = PBXGroup;
 			children = (
-				F934310F2177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.h */,
-				F93431102177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.m */,
-				F9D5989B21763620003B85B7 /* _RRPushAnimator.h */,
-				F9D5989C21763620003B85B7 /* _RRPushAnimator.m */,
-				F9D5989F2176362F003B85B7 /* _RRPopAnimator.h */,
-				F9D598A02176362F003B85B7 /* _RRPopAnimator.m */,
+				3752BFB2264CCADF00075C95 /* _RRPushAnimator.h */,
+				3752BFB5264CCADF00075C95 /* _RRPushAnimator.m */,
+				3752BFB0264CCADF00075C95 /* _RRPopAnimator.h */,
+				3752BFB3264CCADF00075C95 /* _RRPopAnimator.m */,
+				3752BFB1264CCADF00075C95 /* UITabBar+RRNavigationTransitioning_Internal.m */,
+				3752BFB4264CCADF00075C95 /* UITabBar+RRNavigationTransitioning_Internal.h */,
 			);
-			path = Inetrnal;
+			path = Internal;
+			sourceTree = "<group>";
+		};
+		3752BFBE264CCEB000075C95 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				F9D5985421762D9D003B85B7 /* RRNavigationTransitioning.h */,
+				F9D598A421764E66003B85B7 /* RRNavigationTransition.h */,
+				F93431392178C34900595DD2 /* UIViewController+RRNavigationTransitioning.h */,
+			);
+			path = Public;
 			sourceTree = "<group>";
 		};
 		F9D5984721762D9D003B85B7 = {
@@ -133,12 +143,10 @@
 		F9D5985321762D9D003B85B7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				37EEA14B26314A75004F7BCE /* Inetrnal */,
+				3752BFBE264CCEB000075C95 /* Public */,
+				3752BFAF264CCADF00075C95 /* Internal */,
 				376C7FD5262EDB7D0015FCE0 /* Info.plist */,
-				F9D5985421762D9D003B85B7 /* RRNavigationTransitioning.h */,
-				F9D598A421764E66003B85B7 /* RRNavigationTransition.h */,
 				F9D598A521764E66003B85B7 /* RRNavigationTransition.m */,
-				F93431392178C34900595DD2 /* UIViewController+RRNavigationTransitioning.h */,
 				F934313A2178C34900595DD2 /* UIViewController+RRNavigationTransitioning.m */,
 			);
 			path = Sources;
@@ -167,12 +175,12 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9D5989D21763620003B85B7 /* _RRPushAnimator.h in Headers */,
+				3752BFB8264CCADF00075C95 /* _RRPushAnimator.h in Headers */,
+				3752BFBA264CCADF00075C95 /* UITabBar+RRNavigationTransitioning_Internal.h in Headers */,
 				F934313B2178C34900595DD2 /* UIViewController+RRNavigationTransitioning.h in Headers */,
 				F9D598A621764E66003B85B7 /* RRNavigationTransition.h in Headers */,
-				F93431112177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.h in Headers */,
 				F9D5985621762D9D003B85B7 /* RRNavigationTransitioning.h in Headers */,
-				F9D598A12176362F003B85B7 /* _RRPopAnimator.h in Headers */,
+				3752BFB6264CCADF00075C95 /* _RRPopAnimator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,11 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3752BFBB264CCADF00075C95 /* _RRPushAnimator.m in Sources */,
+				3752BFB9264CCADF00075C95 /* _RRPopAnimator.m in Sources */,
 				F9D598A721764E66003B85B7 /* RRNavigationTransition.m in Sources */,
-				F93431122177611000595DD2 /* UITabBar+RRNavigationTransitioning_Internal.m in Sources */,
-				F9D5989E21763620003B85B7 /* _RRPushAnimator.m in Sources */,
+				3752BFB7264CCADF00075C95 /* UITabBar+RRNavigationTransitioning_Internal.m in Sources */,
 				F934313C2178C34900595DD2 /* UIViewController+RRNavigationTransitioning.m in Sources */,
-				F9D598A22176362F003B85B7 /* _RRPopAnimator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
