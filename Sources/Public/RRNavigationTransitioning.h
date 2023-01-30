@@ -24,10 +24,12 @@
 //  THE SOFTWARE.
 //
 
-#ifndef RRNavigationTransitioning_h
-#define RRNavigationTransitioning_h
+#import <Foundation/Foundation.h>
 
+#if __has_include(<RRNavigationTransitioning/RRNavigationTransition.h>)
+#import <RRNavigationTransitioning/RRNavigationTransition.h>
+#import <RRNavigationTransitioning/UIViewController+RRNavigationTransitioning.h>
+#else
 #import "RRNavigationTransition.h"
 #import "UIViewController+RRNavigationTransitioning.h"
-
-#endif /* RRNavigationTransitioning_h */
+#endif

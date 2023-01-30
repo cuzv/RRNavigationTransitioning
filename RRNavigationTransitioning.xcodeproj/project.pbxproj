@@ -18,7 +18,6 @@
 		F91534F924C2E1CE000C99B9 /* TailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91534F824C2E1CE000C99B9 /* TailVC.swift */; };
 		F934313821776D8700595DD2 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F934313721776D8700595DD2 /* BaseNavigationController.swift */; };
 		F934313B2178C34900595DD2 /* UIViewController+RRNavigationTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = F93431392178C34900595DD2 /* UIViewController+RRNavigationTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F934313C2178C34900595DD2 /* UIViewController+RRNavigationTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = F934313A2178C34900595DD2 /* UIViewController+RRNavigationTransitioning.m */; };
 		F9D5985621762D9D003B85B7 /* RRNavigationTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D5985421762D9D003B85B7 /* RRNavigationTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F9D5987D21762DE6003B85B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5987C21762DE6003B85B7 /* AppDelegate.swift */; };
 		F9D5987F21762DE6003B85B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D5987E21762DE6003B85B7 /* ViewController.swift */; };
@@ -27,7 +26,8 @@
 		F9D59892217630C9003B85B7 /* RRNavigationTransitioning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9D5985121762D9D003B85B7 /* RRNavigationTransitioning.framework */; };
 		F9D59893217630C9003B85B7 /* RRNavigationTransitioning.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9D5985121762D9D003B85B7 /* RRNavigationTransitioning.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F9D598A621764E66003B85B7 /* RRNavigationTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D598A421764E66003B85B7 /* RRNavigationTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F9D598A721764E66003B85B7 /* RRNavigationTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F9D598A521764E66003B85B7 /* RRNavigationTransition.m */; };
+		F9F61AF02987F5B90011E065 /* RRNavigationTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F61AEE2987F5B90011E065 /* RRNavigationTransition.m */; };
+		F9F61AF12987F5B90011E065 /* UIViewController+RRNavigationTransitioning.m in Sources */ = {isa = PBXBuildFile; fileRef = F9F61AEF2987F5B90011E065 /* UIViewController+RRNavigationTransitioning.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +67,6 @@
 		F91534F824C2E1CE000C99B9 /* TailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TailVC.swift; sourceTree = "<group>"; };
 		F934313721776D8700595DD2 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		F93431392178C34900595DD2 /* UIViewController+RRNavigationTransitioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RRNavigationTransitioning.h"; sourceTree = "<group>"; };
-		F934313A2178C34900595DD2 /* UIViewController+RRNavigationTransitioning.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RRNavigationTransitioning.m"; sourceTree = "<group>"; };
 		F9D5985121762D9D003B85B7 /* RRNavigationTransitioning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RRNavigationTransitioning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9D5985421762D9D003B85B7 /* RRNavigationTransitioning.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRNavigationTransitioning.h; sourceTree = "<group>"; };
 		F9D5987A21762DE6003B85B7 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,7 +76,8 @@
 		F9D5988621762DE7003B85B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9D5988821762DE7003B85B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9D598A421764E66003B85B7 /* RRNavigationTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RRNavigationTransition.h; sourceTree = "<group>"; };
-		F9D598A521764E66003B85B7 /* RRNavigationTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RRNavigationTransition.m; sourceTree = "<group>"; };
+		F9F61AEE2987F5B90011E065 /* RRNavigationTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RRNavigationTransition.m; sourceTree = "<group>"; };
+		F9F61AEF2987F5B90011E065 /* UIViewController+RRNavigationTransitioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RRNavigationTransitioning.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,12 +102,14 @@
 		3752BFAF264CCADF00075C95 /* Internal */ = {
 			isa = PBXGroup;
 			children = (
-				3752BFB2264CCADF00075C95 /* _RRPushAnimator.h */,
-				3752BFB5264CCADF00075C95 /* _RRPushAnimator.m */,
 				3752BFB0264CCADF00075C95 /* _RRPopAnimator.h */,
 				3752BFB3264CCADF00075C95 /* _RRPopAnimator.m */,
-				3752BFB1264CCADF00075C95 /* UITabBar+RRNavigationTransitioning_Internal.m */,
+				3752BFB2264CCADF00075C95 /* _RRPushAnimator.h */,
+				3752BFB5264CCADF00075C95 /* _RRPushAnimator.m */,
+				F9F61AEE2987F5B90011E065 /* RRNavigationTransition.m */,
 				3752BFB4264CCADF00075C95 /* UITabBar+RRNavigationTransitioning_Internal.h */,
+				3752BFB1264CCADF00075C95 /* UITabBar+RRNavigationTransitioning_Internal.m */,
+				F9F61AEF2987F5B90011E065 /* UIViewController+RRNavigationTransitioning.m */,
 			);
 			path = Internal;
 			sourceTree = "<group>";
@@ -146,8 +148,6 @@
 				3752BFBE264CCEB000075C95 /* Public */,
 				3752BFAF264CCADF00075C95 /* Internal */,
 				376C7FD5262EDB7D0015FCE0 /* Info.plist */,
-				F9D598A521764E66003B85B7 /* RRNavigationTransition.m */,
-				F934313A2178C34900595DD2 /* UIViewController+RRNavigationTransitioning.m */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -289,9 +289,9 @@
 			files = (
 				3752BFBB264CCADF00075C95 /* _RRPushAnimator.m in Sources */,
 				3752BFB9264CCADF00075C95 /* _RRPopAnimator.m in Sources */,
-				F9D598A721764E66003B85B7 /* RRNavigationTransition.m in Sources */,
+				F9F61AF02987F5B90011E065 /* RRNavigationTransition.m in Sources */,
+				F9F61AF12987F5B90011E065 /* UIViewController+RRNavigationTransitioning.m in Sources */,
 				3752BFB7264CCADF00075C95 /* UITabBar+RRNavigationTransitioning_Internal.m in Sources */,
-				F934313C2178C34900595DD2 /* UIViewController+RRNavigationTransitioning.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +462,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -486,6 +487,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
